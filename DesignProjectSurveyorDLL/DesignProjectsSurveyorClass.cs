@@ -46,6 +46,24 @@ namespace DesignProjectSurveyorDLL
         FindDesignEmployeeWOVCountDataSet aFindDesignEmployeeWOVCountDataSet;
         FindDesignEmployeeWOVCountDataSetTableAdapters.FindDesignEmployeeWOVCountTableAdapter aFindDesignEmployeeWOVCountTableAdapter;
 
+        FindDesignDepartmentWOVCountDataSet aFindDesignDepartmentWOVCountDataSet;
+        FindDesignDepartmentWOVCountDataSetTableAdapters.FindDesignDepartmentWOVCountTableAdapter aFindDesignDepartmentWOVCountTableAdapter;
+
+        public FindDesignDepartmentWOVCountDataSet FindDesignDepartmentWOVCount(DateTime datStartDate, DateTime datEndDate)
+        {
+            try
+            {
+                aFindDesignDepartmentWOVCountDataSet = new FindDesignDepartmentWOVCountDataSet();
+                aFindDesignDepartmentWOVCountTableAdapter = new FindDesignDepartmentWOVCountDataSetTableAdapters.FindDesignDepartmentWOVCountTableAdapter();
+                aFindDesignDepartmentWOVCountTableAdapter.Fill(aFindDesignDepartmentWOVCountDataSet.FindDesignDepartmentWOVCount, datStartDate, datEndDate);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Design Project Surveryor Class // Find Design Department WOV Count " + Ex.Message);
+            }
+
+            return aFindDesignDepartmentWOVCountDataSet;
+        }
         public FindDesignEmployeeWOVCountDataSet FindDesignEmployeeWOVCount(int intEmployeeID, DateTime datStartDate, DateTime dateEndDate)
         {
             try

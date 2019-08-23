@@ -60,6 +60,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindCurrentDesignProjectRecordDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindDesignDepartmentWOVCountDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindDesignDepartmentWOVCountDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindDesignEmployeeWOVCountDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -141,6 +146,17 @@
     </None>
     <None Include="FindCurrentDesignProjectRecordDataSet.xss">
       <DependentUpon>FindCurrentDesignProjectRecordDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindDesignDepartmentWOVCountDataSet.xsc">
+      <DependentUpon>FindDesignDepartmentWOVCountDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindDesignDepartmentWOVCountDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindDesignDepartmentWOVCountDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindDesignDepartmentWOVCountDataSet.xss">
+      <DependentUpon>FindDesignDepartmentWOVCountDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindDesignEmployeeWOVCountDataSet.xsc">
       <DependentUpon>FindDesignEmployeeWOVCountDataSet.xsd</DependentUpon>
